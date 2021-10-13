@@ -6,7 +6,7 @@ import calendar
 import threading
 import sys
 import random
-from datetime import datetime
+import datetime
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.by import By
@@ -41,11 +41,11 @@ def automation(account,booking_date):
     browser.set_window_size(1200, 600)
     browser.get(link)
 
-    now = datetime.now().time()
+    now = datetime.datetime.now().time()
     login_time = now.replace(hour=23, minute=58, second=0, microsecond=0)
 
     print_for_acc("Waiting to login at " + str(login_time), username)
-    # while datetime.now().time() < login_time:
+    # while datetime.datetime.now().time() < login_time:
     #     pass
 
     login_view = WebDriverWait(browser, 20).until(EC.presence_of_element_located((By.CLASS_NAME, "form-rounded")))
@@ -61,8 +61,11 @@ def automation(account,booking_date):
     facilities_view = WebDriverWait(browser, 30).until(EC.presence_of_element_located((By.NAME, "p_info")))
     radio_button = browser.find_elements_by_name("p_info")[16]
     radio_button.click()
-    booking_date = datetime.strptime(booking_date, '%d/%m/%y').replace(second=2)
-    while datetime.now() < booking_date:
+    booking_date = datetime.datetime.strptime(booking_date, '%d/%m/%y')
+    test_date = datetime.datetime.now().replace(minute=49, second=0)
+    print(test_date)
+    run_date = datetime.datetime.now().date() + datetime.timedelta(days=1)
+    while datetime.datetime.now() < test_date:
         pass
     try:
         # court_data = "1BB2BB"+int_formatting(i)+int_formatting(booking_date.day)+"-"+calendar.month_abbr[booking_date.month]+"-"+str(booking_date.year)+"12"
