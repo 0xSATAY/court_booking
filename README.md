@@ -36,7 +36,8 @@ leetcoder1337;cafebabe
 
 4. Download [Chromedriver](https://chromedriver.chromium.org/downloads) for your [Chrome version](https://help.zenplanner.com/hc/en-us/articles/204253654-How-to-Find-Your-Internet-Browser-Version-Number-Google-Chrome) and place it in the same folder as the script.
 
-5. Change the parameter on line 41 to your Chromedriver filename. For Windows: "./chromedriver.exe"; For *NIX: "./chromedriver"
+5. Change the parameter on line 41 to your Chromedriver filename.
+For Windows: `"./chromedriver.exe"`; For *NIX: `"./chromedriver"`
 
 6. Run the script (Make sure you have [Python 3](https://www.python.org/downloads/) installed!!).
 On Windows:
