@@ -55,7 +55,7 @@ $ ./court_booking.py <creds.txt file that you created>
 - [Python 3](https://www.python.org/downloads/)
 
 ## TODO
-[ ]Clean up my code???
-[ ]Make a GUI Electron app so that anyone (even your grandmother) can use it
+- [ ]Clean up my code???
+- [ ]Make a GUI Electron app so that anyone (even your grandmother) can use it
 
 If it doesn't work, go debug it yourself. Unless if you know me, then feel free to PM me.
