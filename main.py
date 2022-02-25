@@ -132,8 +132,8 @@ class UI:
         login_time = now.replace(hour=23, minute=58, second=0, microsecond=0)
 
         self.shared_thread_data = "Waiting to login at " + str(login_time)
-        # while datetime.datetime.now().time() < login_time:
-        #     pass
+        while datetime.datetime.now().time() < login_time:
+            pass
 
         login_view = WebDriverWait(browser, 20).until(EC.presence_of_element_located((By.CLASS_NAME, "form-rounded")))
         username_field = browser.find_elements_by_class_name("form-rounded")[0]
@@ -162,8 +162,8 @@ class UI:
         run_date = datetime.datetime.now().date() + datetime.timedelta(days=1)
         run_date = datetime.datetime.combine(run_date, datetime.time.min)
         print(run_date)
-        # while datetime.datetime.now() < run_date:
-        #     pass
+        while datetime.datetime.now() < run_date:
+            pass
         radio_button.click()
         self.shared_thread_data = "Searching for available courts..."
         for _ in range(6):
