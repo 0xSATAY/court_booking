@@ -1,3 +1,5 @@
+#IMPORTANT: Following README only applicable for the CLI version of the program.
+
 # NTU Court Booking Script
 
 Tired of camping NTU's court booking system at 12am every day just to be disappointed in your slow fingers? Say no more. This shit works. Satisfaction guaranteed.
